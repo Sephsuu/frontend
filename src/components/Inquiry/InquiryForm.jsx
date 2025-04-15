@@ -36,7 +36,7 @@ export default function InquiryForm (){
         e.preventDefault();
         setStep(2);
     };
-
+   
     return (
         <div className='d-flex inquiry_form'>
             <NavigationBar />
@@ -50,8 +50,8 @@ export default function InquiryForm (){
                                         className='img-fluid rounded-start h-100 w-100'
                                         src="/images/kp_inquiry.jpg"
                                         alt="Kp Logo" />
-                                </div>
-                                <div className="col-md-7 h-100 d-flex flex-column">
+                                </div>  
+                                <div className="col-md-7 h-100 d-flex flex-column"> 
                                     <div className="form_image container mt-2 d-flex justify-content-center">
                                         <img
                                             className='img-fluid rounded-start'
@@ -60,7 +60,7 @@ export default function InquiryForm (){
                                     </div>
                                     <h5 className="card-title text-center fs-4 fw-bold">KRISPY PAPI INQUIRY FORM</h5>
                                     <form onSubmit={handleNext} className="d-flex flex-column flex-grow-1 h-75 mx-5 mt-2">
-                                        <div className="mb-3">
+                                        <div className="mb-3 form_fields">
                                             <label htmlFor="name" className="form-label">Name</label>
                                             <input
                                                 type="text"
@@ -72,7 +72,7 @@ export default function InquiryForm (){
                                                 required
                                             />
                                         </div>
-                                        <div className="mb-3">
+                                        <div className="mb-3 form_fields">
                                             <label htmlFor="email" className="form-label">Email</label>
                                             <input
                                                 type="email"
@@ -84,7 +84,7 @@ export default function InquiryForm (){
                                                 required
                                             />
                                         </div>
-                                        <div className="mb-3">
+                                        <div className="mb-3 form_fields">
                                             <label htmlFor="phone" className="form-label">Phone</label>
                                             <input
                                                 type="text"
@@ -96,7 +96,7 @@ export default function InquiryForm (){
                                                 required
                                             />
                                         </div>
-                                        <div className="mb-3">
+                                        <div className="mb-3 form_fields">
                                             <label htmlFor="message" className="form-label">Message</label>
                                             <textarea
                                                 className="form-control"
@@ -108,7 +108,7 @@ export default function InquiryForm (){
                                                 required
                                             ></textarea>
                                         </div>
-                                        <div className="mt-4 d-flex justify-content-start">
+                                        <div className="mt-4 d-flex justify-content-start btn-container">
                                             <button type="submit" className="btn btn-primary next-btn">Next</button>
                                         </div>
                                     </form>
@@ -125,7 +125,7 @@ export default function InquiryForm (){
                                     </div>
                                     <h5 className="card-title mt-3 text-center fs-4 fw-bold">ADDITIONAL DETAILS</h5>
                                     <form onSubmit={handleSubmit} className="d-flex flex-column flex-grow-1 h-75  mx-5 mt-2">
-                                        <div className="mb-3">
+                                        <div className="mb-3 form_fields">
                                             <label htmlFor="location" className="form-label">Desired Location</label>
                                             <input
                                                 type="text"
@@ -137,7 +137,7 @@ export default function InquiryForm (){
                                                 required
                                             />
                                         </div>
-                                        <div className="mb-3">
+                                        <div className="mb-3 form_fields">
                                             <label htmlFor="budget" className="form-label">Budget</label>
                                             <input
                                                 type="number"
@@ -149,7 +149,7 @@ export default function InquiryForm (){
                                                 required
                                             />
                                         </div>
-                                        <div className="mb-3">
+                                        <div className="mb-3 form_fields">
                                             <label htmlFor="targetDate" className="form-label">Target Opening Date</label>
                                             <input
                                                 type="date"
@@ -161,7 +161,7 @@ export default function InquiryForm (){
                                                 required
                                             />
                                         </div>
-                                        <div className="mb-3">
+                                        <div className="mb-3 form_fields">
                                             <label htmlFor="meetingDate" className="form-label">Available Meeting Date</label>
                                             <input
                                                 type="date"
@@ -173,7 +173,7 @@ export default function InquiryForm (){
                                                 required
                                             />
                                         </div>
-                                        <div className="mt-5 d-flex justify-content-end">
+                                        <div className="mt-5 d-flex justify-content-end btn-container">
                                             <button type="submit" className="btn btn-primary submit-btn">Submit</button>
                                         </div>
                                     </form>
