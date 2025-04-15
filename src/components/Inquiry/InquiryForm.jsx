@@ -51,63 +51,67 @@ export default function InquiryForm (){
                                         src="/images/kp_inquiry.jpg"
                                         alt="Kp Logo" />
                                 </div>
-                                <div className="col-md-7 h-100">
-                                    <div className="card-body h-100 mx-5 mt-5 d-flex flex-column">
-                                        <h5 className="card-title text-center mb-5 fs-4 fw-bold">KRISPY PAPI INQUIRY FORM</h5>
-                                        <form onSubmit={handleNext} className="d-flex flex-column flex-grow-1 h-75">
-                                            <div className="mb-3">
-                                                <label htmlFor="name" className="form-label">Name</label>
-                                                <input
-                                                    type="text"
-                                                    className="form-control"
-                                                    id="name"
-                                                    name="name"
-                                                    value={formData.name}
-                                                    onChange={handleChange}
-                                                    required
-                                                />
-                                            </div>
-                                            <div className="mb-3">
-                                                <label htmlFor="email" className="form-label">Email</label>
-                                                <input
-                                                    type="email"
-                                                    className="form-control"
-                                                    id="email"
-                                                    name="email"
-                                                    value={formData.email}
-                                                    onChange={handleChange}
-                                                    required
-                                                />
-                                            </div>
-                                            <div className="mb-3">
-                                                <label htmlFor="phone" className="form-label">Phone</label>
-                                                <input
-                                                    type="text"
-                                                    className="form-control"
-                                                    id="phone"
-                                                    name="phone"
-                                                    value={formData.phone}
-                                                    onChange={handleChange}
-                                                    required
-                                                />
-                                            </div>
-                                            <div className="mb-3">
-                                                <label htmlFor="message" className="form-label">Message</label>
-                                                <textarea
-                                                    className="form-control"
-                                                    id="message"
-                                                    name="message"
-                                                    rows="3"
-                                                    value={formData.message}
-                                                    onChange={handleChange}
-                                                    required
-                                                ></textarea>
-                                            </div>
-                                            <div className="mt-4 d-flex justify-content-start">
-                                                <button type="submit" className="btn btn-primary next-btn">Next</button>
-                                            </div>
-                                        </form>
+                                <div className="col-md-7 h-100 d-flex flex-column">
+                                    <div className="form_image container mt-2 d-flex justify-content-center">
+                                        <img
+                                            className='img-fluid rounded-start'
+                                            src="/images/kp_logo.png"
+                                            alt="Kp Logo" />
                                     </div>
+                                    <h5 className="card-title text-center fs-4 fw-bold">KRISPY PAPI INQUIRY FORM</h5>
+                                    <form onSubmit={handleNext} className="d-flex flex-column flex-grow-1 h-75 mx-5 mt-2">
+                                        <div className="mb-3">
+                                            <label htmlFor="name" className="form-label">Name</label>
+                                            <input
+                                                type="text"
+                                                className="form-control"
+                                                id="name"
+                                                name="name"
+                                                value={formData.name}
+                                                onChange={handleChange}
+                                                required
+                                            />
+                                        </div>
+                                        <div className="mb-3">
+                                            <label htmlFor="email" className="form-label">Email</label>
+                                            <input
+                                                type="email"
+                                                className="form-control"
+                                                id="email"
+                                                name="email"
+                                                value={formData.email}
+                                                onChange={handleChange}
+                                                required
+                                            />
+                                        </div>
+                                        <div className="mb-3">
+                                            <label htmlFor="phone" className="form-label">Phone</label>
+                                            <input
+                                                type="text"
+                                                className="form-control"
+                                                id="phone"
+                                                name="phone"
+                                                value={formData.phone}
+                                                onChange={handleChange}
+                                                required
+                                            />
+                                        </div>
+                                        <div className="mb-3">
+                                            <label htmlFor="message" className="form-label">Message</label>
+                                            <textarea
+                                                className="form-control"
+                                                id="message"
+                                                name="message"
+                                                rows="3"
+                                                value={formData.message}
+                                                onChange={handleChange}
+                                                required
+                                            ></textarea>
+                                        </div>
+                                        <div className="mt-4 d-flex justify-content-start">
+                                            <button type="submit" className="btn btn-primary next-btn">Next</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         ) : (
@@ -118,69 +122,67 @@ export default function InquiryForm (){
                                         src="/images/kp_inquiry.jpg"
                                         alt="Kp Logo" />
                                 </div>
-                                <div className="col-md-7">
-                                    <div className="form_image container mt-2">
+                                <div className="col-md-7 h-100 d-flex flex-column">
+                                    <div className="form_image container mt-2 d-flex justify-content-center">
                                         <img
                                             className='img-fluid rounded-start'
                                             src="/images/kp_logo.png"
                                             alt="Kp Logo" />
                                     </div>
-                                    <h5 className="card-title mt-3 text-center">ADDITONAL DETAILS</h5>
-                                    <div className="card-body mx-5 mt-2 h-75 d-flex flex-column">
-                                        <form onSubmit={handleSubmit} className="d-flex flex-column flex-grow-1">
-                                            <div className="mb-3">
-                                                <label htmlFor="location" className="form-label">Desired Location</label>
-                                                <input
-                                                    type="text"
-                                                    className="form-control"
-                                                    id="location"
-                                                    name="location"
-                                                    value={formData.location || ''}
-                                                    onChange={handleChange}
-                                                    required
-                                                />
-                                            </div>
-                                            <div className="mb-3">
-                                                <label htmlFor="budget" className="form-label">Budget</label>
-                                                <input
-                                                    type="number"
-                                                    className="form-control"
-                                                    id="budget"
-                                                    name="budget"
-                                                    value={formData.budget || ''}
-                                                    onChange={handleChange}
-                                                    required
-                                                />
-                                            </div>
-                                            <div className="mb-3">
-                                                <label htmlFor="meetingDate" className="form-label">Target Opening Date </label>
-                                                <input
-                                                    type="date"
-                                                    className="form-control"
-                                                    id="meetingDate"
-                                                    name="meetingDate"
-                                                    value={formData.meetingDate || ''}
-                                                    onChange={handleChange}
-                                                    required
-                                                />
-                                            </div>
-                                            <div className="mb-3">
-                                                <label htmlFor="meetingDate" className="form-label">Available Meeting Date</label>
-                                                <input
-                                                    type="date"
-                                                    className="form-control"
-                                                    id="meetingDate"
-                                                    name="meetingDate"
-                                                    value={formData.meetingDate || ''}
-                                                    onChange={handleChange}
-                                                    required
-                                                />
-                                            </div>
-                                            <div className="mt-auto d-flex justify-content-end">
-                                                <button type="submit" className="btn btn-primary submit-btn">Submit</button>
-                                            </div>  
-                                        </form>
-                                    </div>
+                                    <h5 className="card-title mt-3 text-center fs-4 fw-bold">ADDITIONAL DETAILS</h5>
+                                    <form onSubmit={handleSubmit} className="d-flex flex-column flex-grow-1 h-75  mx-5 mt-2">
+                                        <div className="mb-3">
+                                            <label htmlFor="location" className="form-label">Desired Location</label>
+                                            <input
+                                                type="text"
+                                                className="form-control"
+                                                id="location"
+                                                name="location"
+                                                value={formData.location || ''}
+                                                onChange={handleChange}
+                                                required
+                                            />
+                                        </div>
+                                        <div className="mb-3">
+                                            <label htmlFor="budget" className="form-label">Budget</label>
+                                            <input
+                                                type="number"
+                                                className="form-control"
+                                                id="budget"
+                                                name="budget"
+                                                value={formData.budget || ''}
+                                                onChange={handleChange}
+                                                required
+                                            />
+                                        </div>
+                                        <div className="mb-3">
+                                            <label htmlFor="targetDate" className="form-label">Target Opening Date</label>
+                                            <input
+                                                type="date"
+                                                className="form-control"
+                                                id="targetDate"
+                                                name="targetDate"
+                                                value={formData.targetDate || ''}
+                                                onChange={handleChange}
+                                                required
+                                            />
+                                        </div>
+                                        <div className="mb-3">
+                                            <label htmlFor="meetingDate" className="form-label">Available Meeting Date</label>
+                                            <input
+                                                type="date"
+                                                className="form-control"
+                                                id="meetingDate"
+                                                name="meetingDate"
+                                                value={formData.meetingDate || ''}
+                                                onChange={handleChange}
+                                                required
+                                            />
+                                        </div>
+                                        <div className="mt-5 d-flex justify-content-end">
+                                            <button type="submit" className="btn btn-primary submit-btn">Submit</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         )}
