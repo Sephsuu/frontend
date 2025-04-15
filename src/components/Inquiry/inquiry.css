@@ -1,0 +1,51 @@
+@import url('../../index.css');
+
+.inquiry_form form {
+    border: none ;
+}
+
+.inquiry_form .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inquiry_form .image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+.inquiry_form .main_card{
+    min-width: 1000px;
+    min-height: 700px;  
+}
+
+
+.inquiry_form .form_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: auto;
+    width: 20%;
+}
+
+.inquiry_form .form_image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.next-btn,
+.submit-btn{
+    background-color: rgb(238, 146, 40);
+    border: none;
+    color: var(--primary);
+    padding: 8px 12px;
+}
+
+
+.next-btn:hover,
+.submit-btn:hover{
+    background-color: rgb(252, 170, 104);
+    color: var(--primary);  
+}

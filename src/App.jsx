@@ -11,6 +11,7 @@ import HumanResource from './components/HumanResource/HumanResource.jsx';
 import Messaging from './components/Messaging/Messaging.jsx';
 import MyCalendar from './components/HumanResource/Dashboard/MyCalendar.jsx';
 import Branches from './components/Branches/Branches.jsx';
+import InquiryForm from './components/Inquiry/InquiryForm.jsx';
 
 function App() {
 
@@ -28,6 +29,8 @@ function App() {
         <Route path="/humanResource" element={<HumanResource />} />
         <Route path="/messaging" element={<Messaging />} />
         <Route path="/branches" element={ <Branches /> } />
+        <Route path="/admin" element={ <InquiryForm /> } />
+
       </Routes>
   );
 }
