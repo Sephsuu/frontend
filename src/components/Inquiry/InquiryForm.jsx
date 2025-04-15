@@ -116,12 +116,6 @@ export default function InquiryForm (){
                             </div>
                         ) : (
                             <div className="d-flex w-100" style={{ transform: step === 2 ? 'translateX(0)' : 'translateX(100%)', transition: 'transform 0.5s ease-in-out' }}>
-                                <div className="col-md-5 image-container">
-                                    <img
-                                        className='img-fluid rounded-start h-100 w-100'
-                                        src="/images/kp_inquiry.jpg"
-                                        alt="Kp Logo" />
-                                </div>
                                 <div className="col-md-7 h-100 d-flex flex-column">
                                     <div className="form_image container mt-2 d-flex justify-content-center">
                                         <img
@@ -183,6 +177,12 @@ export default function InquiryForm (){
                                             <button type="submit" className="btn btn-primary submit-btn">Submit</button>
                                         </div>
                                     </form>
+                                </div>
+                                <div className="col-md-5 image-container">
+                                    <img
+                                        className='img-fluid rounded-start h-100 w-100'
+                                        src="/images/kp_inquiry.jpg"
+                                        alt="Kp Logo" />
                                 </div>
                             </div>
                         )}
