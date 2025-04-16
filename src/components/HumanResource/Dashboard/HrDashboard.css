@@ -88,10 +88,6 @@
     box-shadow: 2px 4px 4px #70707047;
 }
 
-.head, .body, .tail {
-    background: var(--primary);
-}
-
 @media (max-width: 991.98px) {
     .head, .body, .tail {
         justify-content: center;

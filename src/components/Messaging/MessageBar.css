@@ -30,6 +30,12 @@
     font-size: .9rem;
 }
 
+.message_bar .active, 
+.hide_msg_bar .active {
+    background: var(--blue) !important;
+    color: var(--primary);
+}
+
 .branch_dp {
     width: 40px;
     height: 40px;
@@ -41,6 +47,7 @@
         position: absolute !important;
         z-index: 1030;
         background: var(--primary);
+        width: 75%;
     }
 
     .hide_msg_bar {

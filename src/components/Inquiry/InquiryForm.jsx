@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import NavigationBar from '../NavigationBar/NavigationBar';
 import './inquiry.css';
 
@@ -40,9 +39,11 @@ export default function InquiryForm (){
     return (
         <div className='d-flex inquiry_form'>
             <NavigationBar />
-            <div className="d-flex justify-content-center align-items-center vh-100 w-100">
-                <div className="card main_card h-75" style={{ width: '800px', overflow: 'hidden', transition: 'all 0.5s ease-in-out' }}>
-                    <div className="row g-0 h-100">
+
+            
+            <div className="d-flex justify-content-center align-items-center vh-100 w-100 overflow-hidden">
+                <div className="card main_card" style={{ width: '800px', overflow: 'hidden', transition: 'all 0.5s ease-in-out' }}>
+                    <div className="row">
                         {step === 1 ? (
                             <div className="d-flex w-100" style={{ transform: step === 1 ? 'translateX(0)' : 'translateX(-100%)', transition: 'transform 0.5s ease-in-out' }}>
                                 <div className="col-md-5 image-container">
@@ -58,13 +59,13 @@ export default function InquiryForm (){
                                             src="/images/kp_logo.png"
                                             alt="Kp Logo" />
                                     </div>
-                                    <h5 className="card-title text-center fs-4 fw-bold">KRISPY PAPI INQUIRY FORM</h5>
+                                    <h5 className="card-title text-center fw-bold font-md">KRISPY PAPI INQUIRY FORM</h5>
                                     <form onSubmit={handleNext} className="d-flex flex-column flex-grow-1 h-75 mx-5 mt-2">
-                                        <div className="mb-3 form_fields">
-                                            <label htmlFor="name" className="form-label">Name</label>
+                                        <div className="mb-2 form_fields">
+                                            <label htmlFor="name" className="form-label font-sm">Name</label>
                                             <input
                                                 type="text"
-                                                className="form-control"
+                                                className="form-control font-sm"
                                                 id="name"
                                                 name="name"
                                                 value={formData.name}
@@ -72,11 +73,11 @@ export default function InquiryForm (){
                                                 required
                                             />
                                         </div>
-                                        <div className="mb-3 form_fields">
-                                            <label htmlFor="email" className="form-label">Email</label>
+                                        <div className="mb-2 form_fields">
+                                            <label htmlFor="email" className="form-label font-sm">Email</label>
                                             <input
                                                 type="email"
-                                                className="form-control"
+                                                className="form-control font-sm"
                                                 id="email"
                                                 name="email"
                                                 value={formData.email}
@@ -84,11 +85,11 @@ export default function InquiryForm (){
                                                 required
                                             />
                                         </div>
-                                        <div className="mb-3 form_fields">
-                                            <label htmlFor="phone" className="form-label">Phone</label>
+                                        <div className="mb-2 form_fields">
+                                            <label htmlFor="phone" className="form-label font-sm">Phone</label>
                                             <input
                                                 type="text"
-                                                className="form-control"
+                                                className="form-control font-sm"
                                                 id="phone"
                                                 name="phone"
                                                 value={formData.phone}
@@ -96,10 +97,10 @@ export default function InquiryForm (){
                                                 required
                                             />
                                         </div>
-                                        <div className="mb-3 form_fields">
-                                            <label htmlFor="message" className="form-label">Message</label>
+                                        <div className="mb-2 form_fields">
+                                            <label htmlFor="message" className="form-label font-sm">Message</label>
                                             <textarea
-                                                className="form-control"
+                                                className="form-control font-sm"
                                                 id="message"
                                                 name="message"
                                                 rows="3"
@@ -108,8 +109,8 @@ export default function InquiryForm (){
                                                 required
                                             ></textarea>
                                         </div>
-                                        <div className="mt-4 d-flex justify-content-start btn-container">
-                                            <button type="submit" className="btn btn-primary next-btn">Next</button>
+                                        <div className="mt-2 mb-4 d-flex justify-content-start btn-container">
+                                            <button type="submit" className="btn btn-primary next-btn font-sm">Next</button>
                                         </div>
                                     </form>
                                 </div>

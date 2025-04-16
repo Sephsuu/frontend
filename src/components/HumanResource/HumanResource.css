@@ -3,7 +3,7 @@
 .hr_lg {
     max-height: 100vh;
     overflow-x: hidden;
-    background-image: url("/images/hr_bg.svg");
+    /* background-image: url("/images/hr_bg.svg"); */
 }
 
 .hr_nav {

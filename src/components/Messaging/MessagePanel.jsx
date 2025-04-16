@@ -1,4 +1,7 @@
+import { useState } from "react";
 import "./MessagePanel.css";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 export default function MessagePanel(props) {
     const conversations = {
@@ -38,7 +41,66 @@ export default function MessagePanel(props) {
                 receiverId: 4,
                 message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, cupiditate est sed expedita numquam architecto cumque, iusto omnis odio ad repellat distinctio ipsum? Sequi, quas ratione reprehenderit molestiae nemo rerum?"
             },
-
+            {
+                senderId: 1,
+                receiverId: 4,
+                message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, cupiditate est sed expedita numquam architecto cumque, iusto omnis odio ad repellat distinctio ipsum? Sequi, quas ratione reprehenderit molestiae nemo rerum?"
+            },
+            {
+                senderId: 1,
+                receiverId: 4,
+                message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, cupiditate est sed expedita numquam architecto cumque, iusto omnis odio ad repellat distinctio ipsum? Sequi, quas ratione reprehenderit molestiae nemo rerum?"
+            },
+            {
+                senderId: 1,
+                receiverId: 4,
+                message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, cupiditate est sed expedita numquam architecto cumque, iusto omnis odio ad repellat distinctio ipsum? Sequi, quas ratione reprehenderit molestiae nemo rerum?"
+            },
+            {
+                senderId: 1,
+                receiverId: 4,
+                message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, cupiditate est sed expedita numquam architecto cumque, iusto omnis odio ad repellat distinctio ipsum? Sequi, quas ratione reprehenderit molestiae nemo rerum?"
+            },
+            {
+                senderId: 1,
+                receiverId: 4,
+                message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, cupiditate est sed expedita numquam architecto cumque, iusto omnis odio ad repellat distinctio ipsum? Sequi, quas ratione reprehenderit molestiae nemo rerum?"
+            },
+            {
+                senderId: 1,
+                receiverId: 4,
+                message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, cupiditate est sed expedita numquam architecto cumque, iusto omnis odio ad repellat distinctio ipsum? Sequi, quas ratione reprehenderit molestiae nemo rerum?"
+            },
+            {
+                senderId: 1,
+                receiverId: 4,
+                message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, cupiditate est sed expedita numquam architecto cumque, iusto omnis odio ad repellat distinctio ipsum? Sequi, quas ratione reprehenderit molestiae nemo rerum?"
+            },
+            {
+                senderId: 1,
+                receiverId: 4,
+                message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, cupiditate est sed expedita numquam architecto cumque, iusto omnis odio ad repellat distinctio ipsum? Sequi, quas ratione reprehenderit molestiae nemo rerum?"
+            },
+            {
+                senderId: 1,
+                receiverId: 4,
+                message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, cupiditate est sed expedita numquam architecto cumque, iusto omnis odio ad repellat distinctio ipsum? Sequi, quas ratione reprehenderit molestiae nemo rerum?"
+            },
+            {
+                senderId: 1,
+                receiverId: 4,
+                message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, cupiditate est sed expedita numquam architecto cumque, iusto omnis odio ad repellat distinctio ipsum? Sequi, quas ratione reprehenderit molestiae nemo rerum?"
+            },
+            {
+                senderId: 1,
+                receiverId: 4,
+                message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, cupiditate est sed expedita numquam architecto cumque, iusto omnis odio ad repellat distinctio ipsum? Sequi, quas ratione reprehenderit molestiae nemo rerum?"
+            },
+            {
+                senderId: 1,
+                receiverId: 4,
+                message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, cupiditate est sed expedita numquam architecto cumque, iusto omnis odio ad repellat distinctio ipsum? Sequi, quas ratione reprehenderit molestiae nemo rerum?"
+            },
         ]
     };
 
@@ -46,15 +108,13 @@ export default function MessagePanel(props) {
 
     const messages = conversations.conversation.filter((e) => e.senderId === branch.id && e.receiverId === props.loggedId || e.receiverId === branch.id && e.senderId === props.loggedId);
     
-    
-    
     return(
-        <section className="message_panel overflow-y-auto">
-            <div className="branch_header py-2 sticky-top d-flex justify-content-center align-items-center">
+        <section className="message_panel">
+            <div className="branch_header py-2 d-flex justify-content-center align-items-center">
                 <button onClick={ () => props.setMessageBarStatus(!props.messageBarStatus) } className="btn d-none"><i className="fa-solid fa-bars"></i></button>
                 <h5 className="text-center fw-bold font-md mt-2">{ branch.branch }</h5>
             </div>
-            <div>
+            <div className="h-100 overflow-y-auto my-auto">
                 {
                     messages.map((message, index) => (
                         message.senderId === props.loggedId ? (
@@ -64,6 +124,14 @@ export default function MessagePanel(props) {
                         )
                     ))
                 }
+                {/* <div ref={messagesEndRef} /> */}
+           
+                <div className="message_field d-flex align-items-center position-fixed bottom-0 vw-100 bg-light pe-5 py-2">
+                    <button className="btn"><img src="/images/clip.svg" width="25px" style={{ marginRight: "-20px" }} /></button>
+                    <button className="btn"><img src="/images/emoji.svg" width="20px" /></button>
+                    <input type="text" placeholder="Type your message here..." className="w-50 p-2 rounded-pill font-sm" />
+                    <button className="btn"><img src="/images/send.svg" width="20px" /></button>
+                </div>
             </div>
         </section>
     );

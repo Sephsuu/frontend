@@ -143,7 +143,7 @@ export default function HumanResource() {
         <div className="hr_lg d-flex w-100">
             <NavigationBar />
 
-            <div className="overflow-x-auto">
+            <div className="ms-lg-4 overflow-x-auto">
                 <div className="d-flex justify-content-between mx-4">
                     <div className="hr_nav d-flex justify-content-between rounded-pill mt-2" style={{ background: "#fff" }}>
                             <button onClick={ () => setActive("Table") } className={`btn rounded-pill font-sm ${active === "Table" ? "active" : ""}`}>Tables</button>

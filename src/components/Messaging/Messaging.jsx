@@ -28,7 +28,7 @@ export default function Messaging() {
         <section className="d-flex w-100 position-relative">
             <NavigationBar />
 
-            <MessageBar branches={ branches } setSelectedBranch={ setSelectedBranch } messageBarStatus={ messageBarStatus } setMessageBarStatus={ setMessageBarStatus } />
+            <MessageBar branches={ branches } selectedBranch={ selectedBranch } setSelectedBranch={ setSelectedBranch } messageBarStatus={ messageBarStatus } setMessageBarStatus={ setMessageBarStatus } />
 
             <MessagePanel branches={ branches } branch={ selectedBranch } loggedId={ loggedId } messageBarStatus={ messageBarStatus } setMessageBarStatus={ setMessageBarStatus } />
         </section>
