@@ -109,12 +109,12 @@ export default function MessagePanel(props) {
     const messages = conversations.conversation.filter((e) => e.senderId === branch.id && e.receiverId === props.loggedId || e.receiverId === branch.id && e.senderId === props.loggedId);
     
     return(
-        <section className="message_panel">
+        <section className="message_panel position-relative">
             <div className="branch_header py-2 d-flex justify-content-center align-items-center">
                 <button onClick={ () => props.setMessageBarStatus(!props.messageBarStatus) } className="btn d-none"><i className="fa-solid fa-bars"></i></button>
                 <h5 className="text-center fw-bold font-md mt-2">{ branch.branch }</h5>
             </div>
-            <div className="h-100 overflow-y-auto my-auto">
+            <div className="h-100 overflow-y-auto position-relative">
                 {
                     messages.map((message, index) => (
                         message.senderId === props.loggedId ? (
@@ -125,13 +125,12 @@ export default function MessagePanel(props) {
                     ))
                 }
                 {/* <div ref={messagesEndRef} /> */}
-           
-                <div className="message_field d-flex align-items-center position-fixed bottom-0 vw-100 bg-light pe-5 py-2">
-                    <button className="btn"><img src="/images/clip.svg" width="25px" style={{ marginRight: "-20px" }} /></button>
-                    <button className="btn"><img src="/images/emoji.svg" width="20px" /></button>
-                    <input type="text" placeholder="Type your message here..." className="w-50 p-2 rounded-pill font-sm" />
-                    <button className="btn"><img src="/images/send.svg" width="20px" /></button>
-                </div>
+            </div>
+            <div className="message_field d-flex justify-content-end sticky-bottom w-100 ms-auto align-items-center bg-light">
+                <button className="btn"><img src="/images/clip.svg" width="25px" style={{ marginRight: "-20px" }} /></button>
+                <button className="btn"><img src="/images/emoji.svg" width="20px" /></button>
+                <input type="text" placeholder="Type your message here..." className="w-50 p-2 rounded-pill flex-fill" />
+                <button className="btn"><img src="/images/send.svg" width="20px" /></button>
             </div>
         </section>
     );

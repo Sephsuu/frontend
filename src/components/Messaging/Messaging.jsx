@@ -25,7 +25,7 @@ export default function Messaging() {
     ];
 
     return(
-        <section className="d-flex w-100 position-relative">
+        <section className="d-flex w-100 overflow-y-hidden">
             <NavigationBar />
 
             <MessageBar branches={ branches } selectedBranch={ selectedBranch } setSelectedBranch={ setSelectedBranch } messageBarStatus={ messageBarStatus } setMessageBarStatus={ setMessageBarStatus } />

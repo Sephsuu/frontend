@@ -22,7 +22,7 @@ function App() {
 
   return( 
       <Routes>
-        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/" element={<Navigate to="/inventory" />} />
         <Route path="/login" element={<Charts />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/inventory" element={<Inventory />} />

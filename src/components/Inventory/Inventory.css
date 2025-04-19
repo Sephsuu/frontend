@@ -5,6 +5,22 @@
     max-height: 100vh;
 }
 
+.inventory .active {
+    background: var(--darkorange);
+    border: none;
+    color: #fff;
+}
+
+.inventory .inventory_nav button {
+    white-space: nowrap;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.inventory .inventory_nav .active {
+    background: var(--blue);
+}
+
 .toggle_hide {
     color: var(--secondary);
 }
@@ -31,6 +47,15 @@
 
 .inventory_button_group .button:hover{
     opacity: 0.7;;
+}
+
+.inventory .dropdown button {
+    background: none;
+    color: var(--darkblue);
+}
+
+.inventory .dropdown button:active {
+    border: none;
 }
 
 @media (max-width: 1039.98px)  {
